@@ -14,7 +14,13 @@ qt_add_executable(appCloudMusic
 qt_add_qml_module(appCloudMusic
     URI CloudMusic
     VERSION 1.0
-    QML_FILES main.qml 
+    QML_FILES main.qml
+    QML_FILES src/main/leftMenu/LeftMenu.qml
+    QML_FILES src/main/bottomControl/BottomControl.qml
+    QML_FILES src/main/mainContent/MainContent.qml
+    QML_FILES src/components/BaseWindow.qml
+    RESOURCES resources/iconFont/iconfont.ttf
+    QML_FILES src/components/BaseIconFont.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
