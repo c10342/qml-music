@@ -1,4 +1,5 @@
 import QtQuick
+import '../basic'
 
 Window {
     id:baseWindow
@@ -23,6 +24,11 @@ Window {
             let delta = Qt.point(event.x - clickPosition.x, event.y - clickPosition.y)
             baseWindow.x += delta.x;
             baseWindow.y += delta.y;
+        }
+
+        onClicked: {
+            // 触发信号槽
+            GlobalConfig.clickBlankArea()
         }
     }
 }

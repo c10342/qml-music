@@ -1,6 +1,7 @@
 import QtQuick
 import '../../components'
 import QtQuick.Controls
+import '../../basic'
 
 // 右侧主内容区
 Rectangle{
@@ -10,6 +11,14 @@ Rectangle{
     anchors.bottom: bottomControl.top
     anchors.right: parent.right
     color: '#13131a'
+    // 连接信号槽
+    Connections{
+        target: GlobalConfig
+        // 信号槽处理函数
+        function onClickBlankArea(){
+            console.log('click')
+        }
+    }
     Rectangle{
         anchors.top: parent.top
         anchors.left: parent.left
