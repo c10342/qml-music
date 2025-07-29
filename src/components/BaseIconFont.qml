@@ -13,7 +13,8 @@ Text {
             close:"\ue61d",
             minimize:'\ue70d',
             restore:'\ue7bf',
-            maximize:'\ue697'
+            maximize:'\ue697',
+            search:'\ue600'
         }
         let value = iconMap[name]
         baseIconFont.text = value

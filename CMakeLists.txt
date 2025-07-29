@@ -21,6 +21,7 @@ qt_add_qml_module(appCloudMusic
     QML_FILES src/components/BaseWindow.qml
     RESOURCES resources/iconFont/iconfont.ttf
     QML_FILES src/components/BaseIconFont.qml
+    QML_FILES src/main/mainContent/MinAndMax.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
