@@ -24,6 +24,9 @@ qt_add_qml_module(appCloudMusic
     QML_FILES src/main/mainContent/MinAndMax.qml
     QML_FILES src/basic/GlobalConfig.qml
     RESOURCES src/basic/qmldir
+    QML_FILES src/main/mainContent/TopHeader.qml
+    QML_FILES src/main/mainContent/stackPages/Settings.qml
+    QML_FILES src/main/mainContent/stackPages/CloudMusicCherryPick.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
