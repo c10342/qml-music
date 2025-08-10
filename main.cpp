@@ -1,30 +1,19 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include <qfontdatabase.h>
-
+#include <QIcon>
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    // if (QFontDatabase::addApplicationFont(QLatin1String(":/CloudMusic/resources/iconFont/iconfont.ttf")) == -1){
-    //      qWarning() << "Failed to load fontello.ttf";
-    // }
-
-
-
-    const QUrl url(QStringLiteral("qrc:/CloudMusic/main.qml"));
     QObject::connect(
         &engine,
-        &QQmlApplicationEngine::objectCreated,
+        &QQmlApplicationEngine::objectCreationFailed,
         &app,
-        [url](QObject *obj, const QUrl &objUrl) {
-            if (!obj && url == objUrl)
-                QCoreApplication::exit(-1);
-        },
+        []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
-    engine.load(url);
+    engine.loadFromModule("music_player", "Main");
 
     return app.exec();
 }
